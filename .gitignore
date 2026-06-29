@@ -1,0 +1,5 @@
+**/__pycache__/
+pytk.egg-info/
+build/
+_venv/
+.env

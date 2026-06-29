@@ -1,0 +1,22 @@
+[project]
+name = "pytk"
+version = "1.0.0"
+description = "Python Toolkit by One Level Studio"
+authors = [{ name = "One Level Studio" }]
+requires-python = ">=3.10"
+
+dependencies = [
+    "numpy",
+    "opencv-python",
+    "pillow",
+    "requests",
+    "openai",
+    "pymupdf",
+    "openpyxl",
+    "python-docx",
+    "python-dotenv",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"

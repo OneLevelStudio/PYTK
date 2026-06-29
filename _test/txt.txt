@@ -1,0 +1,8 @@
+01: Hello,
+02: this is a TXT file!
+
+04: Above is a blank line.
+05: Đây là 1 dòng văn bản tiếng Việt để kiểm tra UTF-8.
+06: <i>Line 6 with italic HTML tag.</i>
+07: 😎😎😎
+08: Below will be a blank line, so there is total 9 lines.
