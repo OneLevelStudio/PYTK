@@ -6,6 +6,7 @@ def check_pytk():
 # ====================================================================================================
 
 from dotenv import load_dotenv
+from rapidfuzz import fuzz
 from openai import OpenAI
 from PIL import Image
 import unicodedata
@@ -81,8 +82,10 @@ def clean_whitespace(text):
 def fuzzy_search(search_query, ls_search_values, top_search=1, score_cutoff=0.5):
     results = []
     for idx, val in enumerate(ls_search_values):
-        # Compute similarity ratio (case-insensitive)
-        score = difflib.SequenceMatcher(None, search_query.lower(), val.lower()).ratio()
+        # ----- Compute similarity ratio (case-insensitive)
+        # score = difflib.SequenceMatcher(None, search_query.lower(), val.lower()).ratio()
+        score = fuzz.partial_ratio(search_query.lower(), val.lower())
+        # -----
         if score >= score_cutoff:
             results.append({"value": val, "index": idx, "score": round(score, 2)})
     # Sort by score descending
